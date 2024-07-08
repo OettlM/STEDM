@@ -1,0 +1,5 @@
+name: mp
+
+class_name: MultiPatchSampler
+
+num_patches: 10

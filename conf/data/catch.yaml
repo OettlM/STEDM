@@ -1,0 +1,33 @@
+name: catch
+
+class_train_samples: 6
+
+samples: 10000
+lookup_f: 128
+
+num_classes: 8
+classes: ["Background", "Melanoma", "Histiocytoma", "Plasmacytoma", "Trichoblastoma","MCT", "SCC", "PNST"]
+name_idx: 0
+
+num_val_inst: 35
+num_test_inst: 70
+
+batch_base: 2
+batch_size: null
+
+base_scale: 8
+patch_size: 512
+overlap_train: 64
+overlap_val: 128
+
+reload_data: false
+
+eval_subtypes: True
+eval_key: catch_anno
+test_folder: test_img_diff/catch
+
+defaults:
+  - dataset:
+    - catch_anno
+
+ratios: [1.0]

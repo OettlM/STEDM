@@ -1,0 +1,10 @@
+name: cluster
+
+n_gpus: 2
+batch_mul: 4
+backend: nccl
+compile: disabled
+
+n_workers: 4
+data_dir: /your/data/dir
+result_dir: /your/result/dir

@@ -1,0 +1,30 @@
+name: flowers
+
+class_train_samples: 20
+
+samples: 10000
+
+num_classes: 2
+classes: ["BG", "FG"]
+
+num_val_inst: 1020
+num_test_inst: 6149
+
+batch_base: 2
+batch_size: null
+
+patch_size: 512
+overlap_train: 1
+overlap_val: 1
+
+reload_data: false
+
+eval_subtypes: False
+eval_key: flowers_anno
+test_folder: test_img_diff/flowers
+
+defaults:
+  - dataset:
+    - flowers_anno
+
+ratios: [1.0]

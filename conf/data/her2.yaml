@@ -1,0 +1,32 @@
+name: her2
+
+class_train_samples: 6
+
+samples: 10000
+lookup_f: 32
+
+num_classes: 6
+classes: ["BG", "HER2 0", "HER2 1+", "HER2 2+", "HER2 3+", "LCIS/DCIS"]
+
+num_val_inst: 8
+num_test_inst: 8
+
+batch_base: 2
+batch_size: null
+
+base_scale: 2
+patch_size: 512
+overlap_train: 64
+overlap_val: 128
+
+reload_data: false
+
+eval_subtypes: False
+eval_key: her2_anno
+test_folder: test_img_diff/her2
+
+defaults:
+  - dataset:
+    - her2_anno
+
+ratios: [1.0]

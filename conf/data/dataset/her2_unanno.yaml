@@ -1,0 +1,6 @@
+her2_unanno:
+  name: her2_unanno
+  file: data.her2.her2_dm.HER2_DM_UnAnno
+
+  zip_file_name: scoring_wsi.zip
+  list_file_name: all_wsi_scores.csv

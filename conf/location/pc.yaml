@@ -1,0 +1,10 @@
+name: pc
+
+n_gpus: 1
+batch_mul: 1
+backend: gloo
+compile: disable
+
+n_workers: 4
+data_dir: /your/data/dir
+result_dir: /your/result/dir

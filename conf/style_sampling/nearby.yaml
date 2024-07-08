@@ -1,0 +1,5 @@
+name: nearby
+
+class_name: NearbySampler
+
+relative_dist: 1

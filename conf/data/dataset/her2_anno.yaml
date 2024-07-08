@@ -1,0 +1,57 @@
+her2_anno:
+  name: her2_anno
+  file: data.her2.her2_dm.HER2_DM_Anno
+
+  train_img_set: Training
+  test_img_set: Test
+
+  anno_product: HER2 Tissues
+  roi_labels: ["Finished 1","Finished 2", "Set 1", "Set 2"]
+
+  label_dict:
+    Background: 0
+    HER2 0: 1
+    HER2 1+: 2
+    HER2 2+: 3
+    HER2 3+: 4
+    DCIS: 5
+    LCIS: 5
+    Hard Negative: 0
+    Necrosis: 0
+    To Verify: 0
+
+  score_dict:
+    276993: 0
+    277769: 0
+    277850: 2
+    278024: 1
+    278115: 0
+    278411: 1
+    279696: 3
+    288664: 3
+    289430: 3
+    290095: 2
+    297927: 1
+    299127: 1
+    299218: 1
+    300641: 3
+    300889: 3
+    301393: 2
+    301995: 3
+    302501: 0
+    302625: 2
+    302910: 2
+    303059: 0
+    303300: 0
+    303504: 1
+    304052: 2
+
+  classes: ["Background","HER2 0","HER2 1+","HER2 2+","HER2 3+","LCIS/DCIS"]
+
+  folds: [[302330, 299081, 290379, 289565, 290142, 299058, 302443, 300152]]
+
+
+defaults:
+  - _self_
+  - annotator@her2_anno.annotator: her2_anno
+  - anno_server@her2_anno.anno_server: exact_local

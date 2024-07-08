@@ -1,0 +1,25 @@
+name: seg
+
+run_name: null
+
+num_epochs: 75
+
+lr: null
+base_lr: 5e-7
+
+ce_ratio: 0.1
+dice_ratio: 0.9
+
+
+defaults:
+  - _self_
+  - data: flowers
+  - location: pc
+  - style_sampling: none
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

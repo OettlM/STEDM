@@ -1,0 +1,5 @@
+flowers_syn:
+  name: flowers_syn
+  file: data.flowers.flowers_dm.Flowers_DM_Syn
+
+  folder_name: flowers

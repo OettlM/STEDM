@@ -1,0 +1,12 @@
+name: svit
+
+patch_size: 8 
+dim: 256 
+depth: 6
+heads: 12
+mlp_dim: 256
+pool: mean
+channels: 3
+dropout: 0.1
+emb_dropout: 0.1
+t_dim: 256

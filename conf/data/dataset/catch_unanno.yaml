@@ -1,0 +1,34 @@
+catch_unanno:
+  name: catch_unanno
+  file: data.catch.catch_dm.CATCH_DM_UnAnno
+
+  zip_name: catch
+
+  img_sets: ["Melanoma", "Histiocytoma", "Mast cell tumor", "Peripheral nerve sheath tumor", "Plasmacytoma", "Squamous cell carcinoma", "Trichoblastoma"]
+  type: wsi
+
+  split_file: CATCH_dataset.csv
+
+  anno_product: Canine Skin Tissue Types
+
+  label_dict:
+    Subcutis: 0
+    Epidermis: 0
+    Dermis: 0
+    Inflamm/Necrosis: 0
+    Cartilage: 0
+    Bone: 0
+    Trichoblastoma: 1
+    Mast Cell Tumor: 2
+    Melanoma: 3
+    PNST: 4
+    Plasmacytoma: 5
+    SCC: 6
+    Histiocytoma : 7
+
+  classes: ["Background","Trichoblastoma","Mast Cell Tumor","Melanoma","PNST","Plasmacytoma","SCC","Histiocytoma"]
+
+defaults:
+  - _self_
+  - annotator@catch_unanno.annotator: catch_anno
+  - anno_server@catch_unanno.anno_server: exact_local

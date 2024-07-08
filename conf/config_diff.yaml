@@ -1,0 +1,23 @@
+name: diff
+
+num_epochs: 25
+
+lr: null
+base_lr: 1e-7
+
+style_drop_rate: 0.25
+
+defaults:
+  - _self_
+  - data: flowers
+  - location: pc
+  - diffusion: ldm_based
+  - style_sampling: nearby
+  - style_agg: linear
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
