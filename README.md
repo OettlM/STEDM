@@ -53,13 +53,21 @@ python train_seg.py location=cluster data=flowers data/dataset=[her2_anno,her2_s
 #### Settings
 
 Parameterization of runs is performed with hydra, with the configs being located at conf
+
 **location**, contains settings for the execution locations, e.g. number of gpus
+
 **data**, the dataset to be used
+
 **data/datasets**, list of the sub-datasets used in the current experiment
+
 **data/ratios**, list matching the len of data/datasets, with the sampling ratios for the datasets
+
 **style_sampling**, the style sampling strategy used
+
 **style_agg**, the style aggregation strategy used
+
 **data.class_train_samples**, the number of samples used from each class. Controlls the amount of labelled data utilized. Unused data is used as unlabelled style source.
+
 **cfg_scale**, classifier-free guidance scale, utilized for generating synthetic images
 
 
